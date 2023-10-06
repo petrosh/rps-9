@@ -14,24 +14,36 @@ jobs:
         uses: actions/checkout@v3
 
       # Get UNIX
-      - name: "Get current unix"
+      - name: Get current unix
         id: unix
         run: echo "unix_seconds=$(date +%s)" >> $GITHUB_ENV
 
       # Get Dice
-      - name: "Get dice"
+      - name: Get dice
         id: dice
         run: echo "dice_value=$(expr 1 + $RANDOM % 6)" >> $GITHUB_ENV
+
+      # Get Dice Bis
+      - name: Get dice Bis
+        id: diceb
+        run: echo "dice_value_b=$(expr 1 + $RANDOM % 6)" >> $GITHUB_ENV
+
+      # Get Dice Tris
+      - name: Get dice Tris
+        id: dicet
+        run: echo "dice_value_t=$(expr 1 + $RANDOM % 6)" >> $GITHUB_ENV
 
       # write to CSV file
       - name: Write to CSV file
         uses: gr2m/write-csv-file-action@v1.0.0
         with:
           path: "_data/turns.csv"
-          columns: run, unix, dice
+          columns: run, unix, dice, diceb, dicet
           "run": "$"
           "unix": "$"
           "dice": "$"
+          "diceb": "$"
+          "dicet": "$"
 
       # COMMIT
       - name: Git Auto Commit
