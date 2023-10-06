@@ -1,22 +1,22 @@
 ---
 rps_9:
-  - symbol:🪨
+  - symbol: "🪨"
     name: Rock
-  - symbol: 🧻
+  - symbol: "🧻"
     name: Paper
-  - symbol: ✂️
+  - symbol: "✂️"
     name: Scissors
-  - symbol: 🔥
+  - symbol: "🔥"
     name: Fire
-  - symbol: 💦
+  - symbol: "💦"
     name: Water
-  - symbol: 🌬️
+  - symbol: "🌬️"
     name: Air
-  - symbol 🧽
+  - symbol "🧽"
     name: Sponge
-  - symbol: 🔫
+  - symbol: "🔫"
     name: Laser
-  - symbol: 🧠
+  - symbol: "🧠"
     name: Brain
 ---
 # Home
