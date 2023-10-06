@@ -16,22 +16,22 @@ jobs:
       # Get UNIX
       - name: Get current unix
         id: unix
-        run: echo "unix_seconds=$(date +%s)" >> $GITHUB_ENV
+        run: echo "unix_seconds=$(date +%s)" >> $GITHUB_OUTPUT
 
       # Get Dice
       - name: Get dice
         id: dice
-        run: echo "dice_value=$(expr 1 + $RANDOM % 6)" >> $GITHUB_ENV
+        run: echo "dice_value=$(expr 1 + $RANDOM % 6)" >> $GITHUB_OUTPUT
 
       # Get Dice Bis
       - name: Get dice Bis
         id: diceb
-        run: echo "dice_value_b=$(expr 1 + $RANDOM % 6)" >> $GITHUB_ENV
+        run: echo "dice_value_b=$(expr 1 + $RANDOM % 6)" >> $GITHUB_OUTPUT
 
       # Get Dice Tris
       - name: Get dice Tris
         id: dicet
-        run: echo "dice_value_t=$(expr 1 + $RANDOM % 6)" >> $GITHUB_ENV
+        run: echo "dice_value_t=$(expr 1 + $RANDOM % 6)" >> $GITHUB_OUTPUT
 
       # write to CSV file
       - name: Write to CSV file
@@ -39,11 +39,11 @@ jobs:
         with:
           path: "_data/turns.csv"
           columns: run, unix, dice, diceb, dicet
-          "run": "$"
-          "unix": "$"
-          "dice": "$"
-          "diceb": "$"
-          "dicet": "$"
+          run: ${{ github.run_id }}
+          unix: ${{ steps.unix.outputs.unix_seconds }}
+          dice: ${{ steps.dice.outputs.dice_value }}
+          diceb: ${{ steps.diceb.outputs.dice_value_b }}
+          dicet: ${{ steps.dicet.outputs.dice_value_t }}
 
       # COMMIT
       - name: Git Auto Commit
