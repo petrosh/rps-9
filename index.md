@@ -1,22 +1,22 @@
 ---
 rps_9:
-  - symbol: "🪨"
+  - symbol: https://github.githubassets.com/images/icons/emoji/unicode/1faa8.png?v8
     name: Rock
-  - symbol: "🧻"
+  - symbol: https://github.githubassets.com/images/icons/emoji/unicode/1f9fb.png?v8
     name: Paper
-  - symbol: "✂️"
+  - symbol: https://github.githubassets.com/images/icons/emoji/unicode/2702.png?v8
     name: Scissors
-  - symbol: "🔥"
+  - symbol: https://github.githubassets.com/images/icons/emoji/unicode/1f525.png?v8
     name: Fire
-  - symbol: "💦"
+  - symbol: https://github.githubassets.com/images/icons/emoji/unicode/1f4a6.png?v8
     name: Water
-  - symbol: "🌬️"
+  - symbol: https://github.githubassets.com/images/icons/emoji/unicode/1f32c.png?v8
     name: Air
-  - symbol "🧽"
+  - symbol https://github.githubassets.com/images/icons/emoji/unicode/1f9fd.png?v8
     name: Sponge
-  - symbol: "🔫"
+  - symbol: https://github.githubassets.com/images/icons/emoji/unicode/1f52b.png?v8
     name: Laser
-  - symbol: "🧠"
+  - symbol: https://github.githubassets.com/images/icons/emoji/unicode/1f9e0.png?v8
     name: Brain
 ---
 # Home
