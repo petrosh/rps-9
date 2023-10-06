@@ -35,11 +35,11 @@ jobs:
 
       # write to CSV file
       - name: Write to CSV file
-        uses: gr2m/write-csv-file-action@v1.0.0
+        uses: gr2m/write-csv-file-action@v1.0.4
         with:
           path: "_data/turns.csv"
           columns: run, unix, dice, diceb, dicet
-          run: ${{ github.run_id }}
+          run: ${{ GITHUB_RUN_NUMBER }}
           unix: ${{ steps.unix.outputs.unix_seconds }}
           dice: ${{ steps.dice.outputs.dice_value }}
           diceb: ${{ steps.diceb.outputs.dice_value_b }}
