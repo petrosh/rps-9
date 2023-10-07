@@ -29,9 +29,6 @@ rps_9:
 {% for s in page.rps_9 %}|{% for p in s %}{% if forloop.index == 1 %}<img src="{{ p[1] }}">{% else %}{{ p[1] }}{% endif %}|{% endfor %}
 {% endfor %}
 
+{% include widgets/view.html csv='rps_9' %}
+
 <style>td img{max-height: 1.2em;}</style>
-
-### Turns
-
-{% for d in site.data.turns %}- {{ d | inspect }}
-{% endfor %}
