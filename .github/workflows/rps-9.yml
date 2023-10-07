@@ -39,7 +39,7 @@ jobs:
         with:
           path: "_data/turns.csv"
           columns: run, unix, dice, diceb, dicet
-          run: ${{ GITHUB_RUN_NUMBER }}
+          run: ${{ github.run_number }}
           unix: ${{ steps.unix.outputs.unix_seconds }}
           dice: ${{ steps.dice.outputs.dice_value }}
           diceb: ${{ steps.diceb.outputs.dice_value_b }}
