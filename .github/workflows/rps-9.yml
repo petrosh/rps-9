@@ -3,7 +3,7 @@ name: Play turn
 on:
   schedule:
     # Run at 00:01 06:01 12:01 18:01 UTC every day
-    - cron: '1 0/6 * * *'
+    - cron: '1 0 * * *'
 jobs:
   update:
     name: manifest turn
