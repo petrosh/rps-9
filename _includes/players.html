@@ -1,0 +1,4 @@
+|name|{% for dice in (1..6) %}{{ dice }}|{% endfor %}
+|--:|{% for dice in (1..6) %}:--:|{% endfor %}
+{% for p in include.players %}|{{ p | capitalize }}|{% assign plays = site.data.players[p] %}{% for j in plays %}{%- include symbol.html name=j -%}|{% endfor %}
+{% endfor %}

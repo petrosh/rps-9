@@ -1,0 +1,5 @@
+{%- if include.name -%}
+<img src="{{ site.data.rps_9 | where: 'name', include.name | map: 'symbol' | first | default: include.url }}">
+{%- elsif include.url -%}
+<img src="{{ include.url }}">
+{%- endif -%}
