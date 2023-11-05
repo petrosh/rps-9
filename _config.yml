@@ -8,6 +8,7 @@ defaults:
       path: ''
     values:
       layout: default
+      class: accent-pink
 
 # COLLECTIONS
 collections:
